@@ -1,0 +1,242 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-09-29T05:44:19.839Z",
+  "__export_source": "insomnia.desktop.app:v2022.6.0",
+  "resources": [
+    {
+      "_id": "req_d54e94222bb7426899187f459224bdaa",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664345586828,
+      "created": 1663764502683,
+      "url": "http://localhost:3000/api/me",
+      "name": "/me",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1664333361556,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "parentId": null,
+      "modified": 1664331691153,
+      "created": 1663764496904,
+      "name": "Lab-11",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_e27124a8ccc34b81b328f4441afec15c",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430217901,
+      "created": 1664333361506,
+      "url": "http://localhost:3000/api/user/login",
+      "name": "/user/login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\":\"user1\",\n\t\"password\": \"1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_852c48a5b76947f9b3805db6eeaf340f"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1664333361506,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_60ac9ded66fb46bf9c0194132be713d4",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430225198,
+      "created": 1663764565339,
+      "url": "http://localhost:3000/api/room",
+      "name": "/room",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{token}}" },
+      "metaSortKey": -1663667048763.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6f3ce02ea28b470aa6bd40cd3ebd2097",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430225856,
+      "created": 1663765356142,
+      "url": "http://localhost:3000/api/room/{{roomId}}/message",
+      "name": "/room/[roomId]/message",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{token}}" },
+      "metaSortKey": -1663618321803.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_51d71cef90a7467dbd123efc30c519c1",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430226460,
+      "created": 1663765485135,
+      "url": "http://localhost:3000/api/room/{{roomId}}/message",
+      "name": "/room/[roomId]/message",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"text\": \"สวัสดีค่ะ\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_881a4c7e0d5942f2ad69b0e675dd44a8"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{token}}" },
+      "metaSortKey": -1663593958323.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d3edaa3bc80b4ca78743cc23f9982dbd",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430228302,
+      "created": 1663766257736,
+      "url": "http://localhost:3000/api/room/{{roomId}}/message/{{messageId}}กด",
+      "name": "/room/[roomId]/message/[messageId]",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{token}}" },
+      "metaSortKey": -1663581776583.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_076a12be5cba480ea046615d89cd25a4",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430231454,
+      "created": 1664333957762,
+      "url": "http://localhost:3000/api/user/register",
+      "name": "/user/register",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\":\"user\",\n\t\"password\":\"5678\",\n\t\"isAdmin\":true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_852c48a5b76947f9b3805db6eeaf340f"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{token}}" },
+      "metaSortKey": -1663581776533.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_2eaf8ac9bed7f99cc0e2553d5f4494af2f0fc864",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1664430214146,
+      "created": 1663764496914,
+      "name": "Base Environment",
+      "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY2NDM1NjAxNSwiZXhwIjoxNjY0MzU3ODE1fQ.stxuMj6pwfh8ow6Ia6NH8DJHeHSBf1l-Wa47Mwy1xRM",
+        "roomId": "bff04e07-3c50-410a-877d-8bc908fbae98",
+        "messageId": "e1480e86-8fdd-4a9d-83fb-69e34e9848f2"
+      },
+      "dataPropertyOrder": { "&": ["token", "roomId", "messageId"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1663764496914,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_2eaf8ac9bed7f99cc0e2553d5f4494af2f0fc864",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1663764496917,
+      "created": 1663764496917,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_5fc7de872c6a4a7e890a65a082ced6f6",
+      "parentId": "wrk_4a288707ff7d4c4daf9d4486523acd5d",
+      "modified": 1663764496905,
+      "created": 1663764496905,
+      "fileName": "Lab-10",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
